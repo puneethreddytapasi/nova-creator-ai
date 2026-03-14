@@ -21,10 +21,13 @@ public class NovaService {
 
     public NovaService() {
 
-        AwsBasicCredentials awsCreds = AwsBasicCredentials.create(
-                System.getenv("AWS_ACCESS_KEY_ID"),
-                System.getenv("AWS_SECRET_ACCESS_KEY")
-        );
+        client = BedrockRuntimeClient.builder()
+                .region(Region.US_EAST_1)
+                .credentialsProvider(
+                        software.amazon.awssdk.auth.credentials.EnvironmentVariableCredentialsProvider.create()
+                )
+                .build();
+    }
 
         client = BedrockRuntimeClient.builder()
                 .region(Region.US_EAST_1)
