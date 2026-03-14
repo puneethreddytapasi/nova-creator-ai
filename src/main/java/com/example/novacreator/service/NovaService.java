@@ -3,14 +3,12 @@ package com.example.novacreator.service;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import software.amazon.awssdk.auth.credentials.EnvironmentVariableCredentialsProvider;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.core.SdkBytes;
 
 import software.amazon.awssdk.services.bedrockruntime.BedrockRuntimeClient;
 import software.amazon.awssdk.services.bedrockruntime.model.*;
-
-import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
-import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
 
 import java.util.Base64;
 
@@ -23,20 +21,9 @@ public class NovaService {
 
         client = BedrockRuntimeClient.builder()
                 .region(Region.US_EAST_1)
-                .credentialsProvider(
-                        software.amazon.awssdk.auth.credentials.EnvironmentVariableCredentialsProvider.create()
-                )
+                .credentialsProvider(EnvironmentVariableCredentialsProvider.create())
                 .build();
     }
-
-        client = BedrockRuntimeClient.builder()
-                .region(Region.US_EAST_1)
-                .credentialsProvider(
-                        StaticCredentialsProvider.create(awsCreds)
-                )
-                .build();
-    }
-
 
     // TEXT PROMPT GENERATION
     public String generate(String prompt) {
