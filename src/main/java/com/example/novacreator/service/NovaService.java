@@ -9,6 +9,9 @@ import software.amazon.awssdk.core.SdkBytes;
 import software.amazon.awssdk.services.bedrockruntime.BedrockRuntimeClient;
 import software.amazon.awssdk.services.bedrockruntime.model.*;
 
+import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
+import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
+
 import java.util.Base64;
 
 @Service
@@ -17,8 +20,17 @@ public class NovaService {
     private final BedrockRuntimeClient client;
 
     public NovaService() {
+
+        AwsBasicCredentials awsCreds = AwsBasicCredentials.create(
+                System.getenv("AWS_ACCESS_KEY_ID"),
+                System.getenv("AWS_SECRET_ACCESS_KEY")
+        );
+
         client = BedrockRuntimeClient.builder()
                 .region(Region.US_EAST_1)
+                .credentialsProvider(
+                        StaticCredentialsProvider.create(awsCreds)
+                )
                 .build();
     }
 
