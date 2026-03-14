@@ -1,3 +1,9 @@
+![AWS](https://img.shields.io/badge/AWS-Bedrock-orange)
+![AI](https://img.shields.io/badge/AI-Amazon%20Nova-blue)
+![Java](https://img.shields.io/badge/Backend-SpringBoot-green)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
+---
 # 🚀 Nova Creator AI
 
 AI-powered Instagram caption generator built using **Amazon Nova AI via AWS Bedrock**.
@@ -130,7 +136,6 @@ Add screenshots of:
 
 Amazon Nova AI Hackathon
 
----
 
 # 📜 License
 
