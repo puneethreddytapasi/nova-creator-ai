@@ -37,6 +37,7 @@ public class NovaService {
                 .build();
     }
 
+
     // TEXT PROMPT GENERATION
     public String generate(String prompt) {
 
