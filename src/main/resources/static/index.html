@@ -2,216 +2,230 @@
 <html>
 <head>
 
-    <meta charset="UTF-8">
-    <title>Nova Creator AI</title>
+<meta charset="UTF-8">
+<title>Nova Creator AI</title>
 
-    <style>
+<style>
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Segoe UI;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI;
+}
 
-        body{
-            background:#f7f6f3;
-            color:#1f2937;
-        }
+body{
+background:#f7f6f3;
+color:#1f2937;
+}
 
-        /* NAVBAR */
+/* NAVBAR */
 
-        nav{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            padding:20px 80px;
-            background:white;
-            box-shadow:0 2px 10px rgba(0,0,0,0.05);
-        }
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
 
-        .logo{
-            font-size:22px;
-            font-weight:700;
-            color:#c9a227;
-        }
+.logo{
+font-size:22px;
+font-weight:700;
+color:#c9a227;
+}
 
-        .menu{
-            display:flex;
-            gap:40px;
-        }
+.menu{
+display:flex;
+gap:40px;
+}
 
-        .menu a{
-            text-decoration:none;
-            color:#374151;
-            font-weight:500;
-            cursor:pointer;
-        }
+.menu a{
+text-decoration:none;
+color:#374151;
+font-weight:500;
+cursor:pointer;
+}
 
-        .menu a:hover{
-            color:#c9a227;
-        }
+.menu a:hover{
+color:#c9a227;
+}
 
-        /* HERO */
+/* HERO */
 
-        .hero{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            padding:80px;
-        }
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:80px;
+}
 
-        .heroText{
-            max-width:500px;
-        }
+.heroText{
+max-width:500px;
+}
 
-        .heroText h1{
-            font-size:48px;
-            margin-bottom:20px;
-        }
+.heroText h1{
+font-size:48px;
+margin-bottom:20px;
+}
 
-        .heroText span{
-            color:#c9a227;
-        }
+.heroText span{
+color:#c9a227;
+}
 
-        .heroText p{
-            margin-bottom:30px;
-            color:#6b7280;
-        }
+.heroText p{
+margin-bottom:30px;
+color:#6b7280;
+}
 
-        /* GENERATOR CARD */
+/* GENERATOR CARD */
 
-        .generator{
-            background:white;
-            padding:30px;
-            border-radius:12px;
-            box-shadow:0 5px 20px rgba(0,0,0,0.05);
-            width:420px;
-        }
+.generator{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+width:420px;
+}
 
-        .generator input{
-            width:100%;
-            padding:12px;
-            margin-top:10px;
-            border-radius:8px;
-            border:1px solid #ddd;
-        }
+.generator input{
+width:100%;
+padding:12px;
+margin-top:10px;
+border-radius:8px;
+border:1px solid #ddd;
+}
 
-        .generator button{
-            width:100%;
-            margin-top:15px;
-            background:#c9a227;
-            border:none;
-            padding:12px;
-            border-radius:8px;
-            color:white;
-            font-weight:600;
-            cursor:pointer;
-        }
+.generator button{
+width:100%;
+margin-top:15px;
+background:#c9a227;
+border:none;
+padding:12px;
+border-radius:8px;
+color:white;
+font-weight:600;
+cursor:pointer;
+}
 
-        .results{
-            margin-top:20px;
-            line-height:1.7;
-        }
+.results{
+margin-top:20px;
+line-height:1.7;
+}
 
-        .caption{
-            display:flex;
-            justify-content:space-between;
-            margin-bottom:8px;
-            background:#f7f6f3;
-            padding:10px;
-            border-radius:8px;
-        }
+.caption{
+display:flex;
+justify-content:space-between;
+margin-bottom:8px;
+background:#f7f6f3;
+padding:10px;
+border-radius:8px;
+}
 
-        .copy{
-            background:#c9a227;
-            color:white;
-            border:none;
-            padding:4px 10px;
-            border-radius:6px;
-            cursor:pointer;
-        }
+.copy{
+background:#c9a227;
+color:white;
+border:none;
+padding:4px 10px;
+border-radius:6px;
+cursor:pointer;
+}
 
-        /* ABOUT PAGE */
+/* ABOUT PAGE */
 
-        .about{
-            padding:80px;
-            display:none;
-        }
+.about{
+padding:80px;
+display:none;
+}
 
-        .about h1{
-            font-size:40px;
-            margin-bottom:20px;
-        }
+.about h1{
+font-size:40px;
+margin-bottom:20px;
+}
 
-        .about p{
-            max-width:800px;
-            margin-bottom:20px;
-            line-height:1.7;
-            color:#4b5563;
-        }
+.about p{
+max-width:800px;
+margin-bottom:20px;
+line-height:1.7;
+color:#4b5563;
+}
 
-        /* HOW IT WORKS */
+/* HOW IT WORKS */
 
-        .steps{
-            margin-top:20px;
-            line-height:1.8;
-            font-size:18px;
-            padding-left:20px;
-        }
+.steps{
+margin-top:20px;
+line-height:1.8;
+font-size:18px;
+padding-left:20px;
+}
 
-        .steps li{
-            margin-bottom:10px;
-        }
+.steps li{
+margin-bottom:10px;
+}
 
-        /* WHY SECTION */
+/* WHY SECTION */
 
-        .why{
-            margin-top:60px;
-        }
+.why{
+margin-top:60px;
+}
 
-        .why h2{
-            font-size:32px;
-            margin-bottom:30px;
-        }
+.why h2{
+font-size:32px;
+margin-bottom:30px;
+}
 
-        .why-grid{
-            display:grid;
-            grid-template-columns:repeat(2,1fr);
-            gap:30px;
-        }
+.why-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+}
 
-        .why-card{
-            background:white;
-            padding:25px;
-            border-radius:12px;
-            box-shadow:0 5px 15px rgba(0,0,0,0.05);
-        }
+.why-card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
 
-        .why-card h3{
-            color:#c9a227;
-            margin-bottom:10px;
-        }
+.why-card h3{
+color:#c9a227;
+margin-bottom:10px;
+}
 
-        /* VIDEO */
+/* VIDEO */
 
-        .video{
-            margin-top:60px;
-        }
+.video{
+margin-top:60px;
+}
 
-        iframe{
-            border-radius:12px;
-        }
+.video-container{
+position:relative;
+padding-bottom:56.25%;
+height:0;
+overflow:hidden;
+max-width:900px;
+margin-top:20px;
+}
 
-        /* FOOTER */
+.video-container iframe{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+border-radius:12px;
+}
 
-        footer{
-            text-align:center;
-            padding:40px;
-            color:#6b7280;
-        }
+/* FOOTER */
 
-    </style>
+footer{
+text-align:center;
+padding:40px;
+color:#6b7280;
+}
+
+</style>
 
 </head>
 
@@ -219,12 +233,12 @@
 
 <nav>
 
-    <div class="logo">Nova Creator AI</div>
+<div class="logo">Nova Creator AI</div>
 
-    <div class="menu">
-        <a onclick="showHome()">Home</a>
-        <a onclick="showAbout()">About</a>
-    </div>
+<div class="menu">
+<a onclick="showHome()">Home</a>
+<a onclick="showAbout()">About</a>
+</div>
 
 </nav>
 
@@ -233,31 +247,32 @@
 
 <section id="home" class="hero">
 
-    <div class="heroText">
+<div class="heroText">
 
-        <h1>Create <span>AI Captions</span> for Reels</h1>
+<h1>Create <span>Viral AI Captions</span> for Reels</h1>
 
-        <p>
-            Generate viral captions for Instagram reels,
-            movie edits and cinematic videos using AI.
-        </p>
+<p>
+Generate viral captions for Instagram reels,
+movie edits and cinematic videos using AI.
+</p>
 
-    </div>
+</div>
 
-    <div class="generator">
+<div class="generator">
 
-        <h3>Generate Caption</h3>
+<h3>Generate Caption</h3>
 
-        <input id="prompt" placeholder="Example: Prabhas cinematic reel caption">
+<input id="prompt" placeholder="Example: Prabhas cinematic reel caption">
 
-        <button onclick="generate()">Generate</button>
+<button onclick="generate()">Generate</button>
 
-        <div id="result" class="results"></div>
-        <button onclick="downloadCaptions()" class="downloadBtn">
-            Download Captions
-        </button>
+<div id="result" class="results"></div>
 
-    </div>
+<button onclick="downloadCaptions()">
+Download Captions
+</button>
+
+</div>
 
 </section>
 
@@ -266,180 +281,186 @@
 
 <section id="about" class="about">
 
-    <h1>About Nova Creator AI</h1>
+<h1>About Nova Creator AI</h1>
 
-    <p>
-        Nova Creator AI is an AI-powered caption generator designed
-        for content creators who produce Instagram reels,
-        cinematic edits and movie based content.
-    </p>
+<p>
+Nova Creator AI is an AI-powered caption generator designed
+for content creators who produce Instagram reels,
+cinematic edits and movie based content.
+</p>
 
-    <p>
-        Instead of spending time thinking of captions, creators can
-        simply describe their video and the AI instantly generates
-        multiple engaging captions.
-    </p>
+<p>
+Instead of spending time thinking of captions, creators can
+simply describe their video and the AI instantly generates
+multiple engaging captions.
+</p>
 
-    <h2>How It Works</h2>
+<h2>How It Works</h2>
 
-    <ol class="steps">
+<ol class="steps">
 
-        <li>User enters a short description of their video</li>
+<li>User enters a short description of their video</li>
+<li>The request is sent to the backend Spring Boot API</li>
+<li>The backend connects to Amazon Bedrock</li>
+<li>Amazon Nova Lite AI generates captions</li>
+<li>Captions are returned and displayed on the website</li>
 
-        <li>The request is sent to the backend Spring Boot API</li>
-
-        <li>The backend connects to Amazon Bedrock</li>
-
-        <li>Amazon Nova Lite AI generates captions</li>
-
-        <li>Captions are returned and displayed on the website</li>
-
-    </ol>
+</ol>
 
 
-    <!-- WHY USE -->
+<!-- WHY USE -->
 
-    <div class="why">
+<div class="why">
 
-        <h2>Why Use Nova Creator AI</h2>
+<h2>Why Use Nova Creator AI</h2>
 
-        <div class="why-grid">
+<div class="why-grid">
 
-            <div class="why-card">
-                <h3>⚡ Save Time</h3>
-                <p>Generate captions instantly without thinking for hours.</p>
-            </div>
+<div class="why-card">
+<h3>⚡ Save Time</h3>
+<p>Generate captions instantly without thinking for hours.</p>
+</div>
 
-            <div class="why-card">
-                <h3>🎬 Perfect for Editors</h3>
-                <p>Designed for movie edits, cinematic reels and fan edits.</p>
-            </div>
+<div class="why-card">
+<h3>🎬 Perfect for Editors</h3>
+<p>Designed for movie edits, cinematic reels and fan edits.</p>
+</div>
 
-            <div class="why-card">
-                <h3>📈 Increase Engagement</h3>
-                <p>Better captions increase likes, shares and reach.</p>
-            </div>
+<div class="why-card">
+<h3>📈 Increase Engagement</h3>
+<p>Better captions increase likes, shares and reach.</p>
+</div>
 
-            <div class="why-card">
-                <h3>🤖 AI Powered</h3>
-                <p>Powered by Amazon Nova AI through Amazon Bedrock.</p>
-            </div>
+<div class="why-card">
+<h3>🤖 AI Powered</h3>
+<p>Powered by Amazon Nova AI through Amazon Bedrock.</p>
+</div>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 
-    <!-- VIDEO DEMO -->
+<!-- VIDEO DEMO -->
 
-    <div class="video">
+<div class="video">
 
-        <h2>Project Demo</h2>
+<h2>Project Demo</h2>
 
-        <iframe width="700" height="400"
-                src="https://youtu.be/xZfzCFGM-KE?si=03s-1DtRMhQ3nhYp"
-                allowfullscreen></iframe>
+<div class="video-container">
 
-    </div>
+<iframe
+src="https://www.youtube.com/embed/xZfzCFGM-KE"
+title="Nova Creator AI Demo"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
 
 </section>
 
 
 <footer>
-    Nova Creator AI © 2026
+Nova Creator AI © 2026
 </footer>
 
 
 <script>
 
-    function showAbout(){
+function showAbout(){
 
-        document.getElementById("home").style.display="none";
-        document.getElementById("about").style.display="block";
+document.getElementById("home").style.display="none";
+document.getElementById("about").style.display="block";
 
-    }
+}
 
-    function showHome(){
+function showHome(){
 
-        document.getElementById("about").style.display="none";
-        document.getElementById("home").style.display="flex";
+document.getElementById("about").style.display="none";
+document.getElementById("home").style.display="flex";
 
-    }
+}
 
-    async function generate(){
+async function generate(){
 
-        const prompt=document.getElementById("prompt").value;
+const prompt=document.getElementById("prompt").value;
 
-        const response=await fetch("/ai/generate",{
+const response=await fetch("/ai/generate",{
 
-            method:"POST",
+method:"POST",
 
-            headers:{
-                "Content-Type":"text/plain"
-            },
+headers:{
+"Content-Type":"text/plain"
+},
 
-            body:prompt
+body:prompt
 
-        });
+});
 
-        const data=await response.text();
+const data=await response.text();
 
-        const captions=data.split(/\d+\./).filter(c=>c.trim()!="");
+const captions=data.split(/\d+\./).filter(c=>c.trim()!="");
 
-        let html="";
+let html="";
 
-        captions.forEach((c,i)=>{
+captions.forEach((c,i)=>{
 
-            html+=`
+html+=`
 <div class="caption">
 <span id="cap${i}">${i+1}. ${c.trim()}</span>
 <button class="copy" onclick="copy('${"cap"+i}')">Copy</button>
 </div>
 `;
 
-        });
+});
 
-        document.getElementById("result").innerHTML=html;
+document.getElementById("result").innerHTML=html;
 
-    }
+}
 
-    function copy(id){
+function copy(id){
 
-        const text=document.getElementById(id).innerText;
+const text=document.getElementById(id).innerText;
 
-        navigator.clipboard.writeText(text);
+navigator.clipboard.writeText(text);
 
-        alert("Copied!");
+alert("Copied!");
 
-    }
-    function downloadCaptions(){
+}
 
-        const captions=document.getElementById("result").innerText.trim();
+function downloadCaptions(){
 
-        if(!captions){
-            alert("Please generate captions first.");
-            return;
-        }
+const captions=document.getElementById("result").innerText.trim();
 
-        const blob=new Blob([captions],{type:"text/plain;charset=utf-8"});
+if(!captions){
+alert("Please generate captions first.");
+return;
+}
 
-        const url=URL.createObjectURL(blob);
+const blob=new Blob([captions],{type:"text/plain;charset=utf-8"});
 
-        const link=document.createElement("a");
+const url=URL.createObjectURL(blob);
 
-        link.href=url;
+const link=document.createElement("a");
 
-        link.download="nova-captions.txt";
+link.href=url;
 
-        document.body.appendChild(link);
+link.download="nova-captions.txt";
 
-        link.click();
+document.body.appendChild(link);
 
-        document.body.removeChild(link);
+link.click();
 
-        URL.revokeObjectURL(url);
+document.body.removeChild(link);
 
-    }
+URL.revokeObjectURL(url);
+
+}
+
 </script>
 
 </body>
